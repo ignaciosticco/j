@@ -82,6 +82,11 @@ variable  		b atom c_1>20.0                           # check for atoms out of t
 compute 		mycompute all reduce sum v_b              # count for atoms outside the room
 variable 		s equal c_mycompute                       # 's' is needed for stopping the process (see bellow)
 
+compute 		xposition sub property/atom x
+variable 		xposition atom c_xposition
+compute 		reduccion sub reduce sum v_xposition
+variable 		xx equal c_reduccion
+#print "POSICION X $xx"
 
 
 # VISUALIZATION (OPTIONAL)
